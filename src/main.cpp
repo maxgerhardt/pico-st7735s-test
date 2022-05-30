@@ -6,10 +6,10 @@
 
 #define TFT_RST p15       // must be "PinName" value, not plain pin number! p15 = GP15.
 #define TFT_DC p14        // data/command, also called RS (register select)
-#define TFT_MOSI SPI_MOSI // use board default SPI pins
+#define TFT_MOSI SPI_MOSI // use board default SPI pins, MISO = 16, MOSI = 19, SCK = 18
 #define TFT_MISO SPI_MISO
 #define TFT_SCLK SPI_SCK
-#define TFT_CS p16
+#define TFT_CS p17
 
 mbed::SPI *tftSPI = nullptr;
 Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
